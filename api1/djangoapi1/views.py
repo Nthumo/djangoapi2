@@ -9,7 +9,7 @@ def poll_list(request):
 
     return JsonResponse(data)
 
-def poll_detail(pk):
+def poll_detail( request,pk):
     poll = get_object_or_404(Poll, pk=pk)
     data = {'results': {
         'question': poll.question,
